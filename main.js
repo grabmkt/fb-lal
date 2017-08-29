@@ -58,7 +58,7 @@ $(document).ready(function() {
       "VN": {"country": "act_1375009352774405", "regional": "act_975723752516548"},
       "MM": {"country": "act_1269417169813870", "regional": "act_1269412346481019"},
       "MYtwo": {"country": "act_1226314357457485"},
-      "SGtwo": {"country": "act_1214763765279211"},
+      "SGtwo": {"country": "act_1214763765279211", "regional":""},
       "IDtwo": {"country": "act_1226315040790750"},
       "MMtwo": {"country": "act_1294931020595818"}
     };
