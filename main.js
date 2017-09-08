@@ -24,9 +24,10 @@ $(document).ready(function() {
   function validateForm() {
     var passed = true;
 
-    if ($("#a_name").val() === "" || $("#a_id").val() === "" || $("#country_dropdown").val() === null || $("#account_dropdown").val() === null) {
-      passed = false;
-      $(".validation").show();
+    if ($("#a_name").val() === "" || $("#a_id").val() === "" {
+      if ($("#country_dropdown").val() === null && $("#country_dropdown_two").val() === null  || $("#account_dropdown").val() === null) && $("#country_dropdown").val() === null )
+        passed = false;
+        $(".validation").show();
     } else {
       $(".validation").hide();
     }
