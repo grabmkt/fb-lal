@@ -62,6 +62,20 @@ $(document).ready(function() {
     if ($("#country_dropdown").val() === null || $("#account_dropdown").val() === null) {
       var audience_name = "Lookalike (" + $("#country_dropdown_two").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
       var account_obj = {
+        "ID": {"country": "act_1226315040790750"},
+        "MY": {"country": "act_1226314357457485"},
+        "SG": {"country": "act_1214763765279211"},
+        "MM": {"country": "act_1294931020595818"}
+      };
+      var account_id = account_obj[$("#country_dropdown").val()][$("#account_dropdown").val()];
+      var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
+
+      submitLAL(processedData, account_id);
+    } 
+    
+    else {
+      var audience_name = "Lookalike (" + $("#country_dropdown").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
+      var account_obj = {
         "ID": {"country": "act_10154201522535343", "regional": "act_960713844017539"},
         "MY": {"country": "act_975721032516820", "regional": "act_1510253962542106"},
         "PH": {"country": "act_286163198", "regional": "act_960709704017953"},
@@ -70,18 +84,10 @@ $(document).ready(function() {
         "VN": {"country": "act_1375009352774405", "regional": "act_975723752516548"},
         "MM": {"country": "act_1269417169813870", "regional": "act_1269412346481019"}
       };
-      var account_id = account_obj[$("#country_dropdown_two").val()][$("#account_dropdown_two").val()];
-    } 
-    
-    else {
-      var audience_name = "Lookalike (" + $("#country_dropdown").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
-      var account_obj = {
-        "ID": {"country": "act_1226315040790750"},
-        "MY": {"country": "act_1226314357457485"},
-        "SG": {"country": "act_1214763765279211"},
-        "MM": {"country": "act_1294931020595818"}
-      };
       var account_id = account_obj[$("#country_dropdown").val()][$("#account_dropdown").val()];
+      var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
+
+      submitLAL(processedData, account_id);
     }
 
 //     var audience_name = "Lookalike (" + $("#country_dropdown").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
@@ -105,9 +111,9 @@ $(document).ready(function() {
 
     // ACCESS_TOKEN logic
 
-    var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
+//     var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
 
-    submitLAL(processedData, account_id);
+//     submitLAL(processedData, account_id);
   }
 
   function submitLAL(formData, account_id) {
