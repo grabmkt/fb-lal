@@ -29,7 +29,11 @@ $(document).ready(function() {
         if ($("#country_dropdown_two").val() === null || $("#account_dropdown_two").val() === null)) {
           passed = false;
           $(".validation").show();
-    } else {
+        }
+      }    
+    } 
+    
+    else {
       $(".validation").hide();
     }
 
