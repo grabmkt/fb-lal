@@ -128,7 +128,7 @@ $(document).ready(function() {
         $(".errorResponse").show();
 
         var errorMsg = document.getElementById("error-msg");
-        errorMsg.innerHTML = "Sorry, I am unable to create a lookalike audience.<br />This is the error message: " + JSON.stringify(xhr.responseJSON.error.message);
+        errorMsg.innerHTML = "Sorry, I am unable to create a lookalike audience.<br />This is the error message: " + JSON.stringify(xhr.responseJSON.error.message)+"Lookalike (" + $("#country_dropdown_two").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();;
       }
     });
 
