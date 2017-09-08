@@ -24,7 +24,7 @@ $(document).ready(function() {
   function validateForm() {
     var passed = true;
 
-    if ($("#a_name").val() === "" || $("#a_id").val() === "") {
+    if ($("#a_name").val() === "" || $("#a_id").val() === "" || $("#country_dropdown").val() === null || $("#account_dropdown").val() === null) {
       passed = false;
       $(".validation").show();
     } 
