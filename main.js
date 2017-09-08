@@ -30,7 +30,13 @@ $(document).ready(function() {
           passed = false;
           $(".validation").show();
         }
-      }    
+        else {
+          $(".validation").hide();
+        }
+      }
+      else {
+          $(".validation").hide();
+      }
     } 
     
     else {
