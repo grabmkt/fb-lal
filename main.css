@@ -74,14 +74,14 @@ a {
 }
 
 .wrapper-two-left {
-  width: 50%;
+  width: 40%;
   box-sizing: border-box;
   margin: auto;
   float: left;
 }
 
 .wrapper-two-right {
-  width: 50%;
+  width: 40%;
   box-sizing: border-box;
   margin: auto;
   float: right;
