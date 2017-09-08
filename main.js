@@ -64,10 +64,10 @@ $(document).ready(function() {
     else {
       var audience_name = "Lookalike (" + $("#country_dropdown").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
       var account_obj = {
-        "ID2": {"country": "act_1226315040790750"},
-        "MY2": {"country": "act_1226314357457485"},
-        "SG2": {"country": "act_1214763765279211"},
-        "MM2": {"country": "act_1294931020595818"}
+        "ID": {"country": "act_1226315040790750"},
+        "MY": {"country": "act_1226314357457485"},
+        "SG": {"country": "act_1214763765279211"},
+        "MM": {"country": "act_1294931020595818"}
       };
       var account_id = account_obj[$("#country_dropdown").val()][$("#account_dropdown").val()];
     }
