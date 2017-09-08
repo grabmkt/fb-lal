@@ -58,7 +58,7 @@ $(document).ready(function() {
         "MM": {"country": "act_1294931020595818"}
       };
       var account_id = account_obj[$("#country_dropdown_two").val()][$("#account_dropdown_two").val()];
-      var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
+      var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown_two").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
 
       submitLAL(processedData, account_id);
     } 
@@ -128,7 +128,7 @@ $(document).ready(function() {
         $(".errorResponse").show();
 
         var errorMsg = document.getElementById("error-msg");
-        errorMsg.innerHTML = "Sorry, I am unable to create a lookalike audience.<br />This is the error message: " + JSON.stringify(xhr.responseJSON.error.message)+"Lookalike (" + $("#country_dropdown_two").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();;
+        errorMsg.innerHTML = "Sorry, I am unable to create a lookalike audience.<br />This is the error message: " + JSON.stringify(xhr.responseJSON.error.message);
       }
     });
 
