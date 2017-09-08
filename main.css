@@ -73,6 +73,12 @@ a {
   margin: auto;
 }
 
+.wrapper-two {
+  width: 50%;
+  box-sizing: border-box;
+  margin: auto;
+}
+
 .group-container {
   border: 1px solid #999;
   border-radius: 5px;
