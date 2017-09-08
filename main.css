@@ -73,11 +73,18 @@ a {
   margin: auto;
 }
 
-.wrapper-two {
-  width: 30%;
+.wrapper-two-left {
+  width: 50%;
   box-sizing: border-box;
   margin: auto;
   float: left;
+}
+
+.wrapper-two-right {
+  width: 50%;
+  box-sizing: border-box;
+  margin: auto;
+  float: right;
 }
 
 .group-container {
