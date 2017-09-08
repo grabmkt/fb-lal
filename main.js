@@ -25,18 +25,8 @@ $(document).ready(function() {
     var passed = true;
 
     if ($("#a_name").val() === "" || $("#a_id").val() === "") {
-      if ($("#country_dropdown").val() === null || $("#account_dropdown").val() === null)) {
-        if ($("#country_dropdown_two").val() === null || $("#account_dropdown_two").val() === null)) {
-          passed = false;
-          $(".validation").show();
-        }
-        else {
-          $(".validation").hide();
-        }
-      }
-      else {
-          $(".validation").hide();
-      }
+      passed = false;
+      $(".validation").show();
     } 
     
     else {
