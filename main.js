@@ -54,8 +54,8 @@ $(document).ready(function() {
       var account_obj = {
         "ID": {"country": "act_1226315040790750"},
         "MY": {"country": "act_1226314357457485"},
-        "SG": {"country": "act_1214763765279211"},
-        "MM": {"country": "act_1294931020595818"}
+        "SG": {"country": "act_1214763765279211"}
+        //"MM": {"country": "act_1294931020595818"}
       };
       var account_id = account_obj[$("#country_dropdown_two").val()][$("#account_dropdown_two").val()];
       var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown_two").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
