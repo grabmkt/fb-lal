@@ -110,7 +110,7 @@ $(document).ready(function() {
     // BIZ_MANAGER_ID logic
 
     $.ajax({
-      url: "https://graph.facebook.com/v2.9/" + account_id + "/customaudiences",
+      url: "https://graph.facebook.com/v2.10/" + account_id + "/customaudiences",
       type: 'POST',
       dataType: 'json',
       data: formData,
