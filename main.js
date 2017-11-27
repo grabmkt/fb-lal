@@ -72,7 +72,8 @@ $(document).ready(function() {
         "SG": {"country": "act_937391186349805", "regional": "act_936786009743656"},
         "TH": {"country": "act_1381390565431254", "regional": "act_960710254017898"},
         "VN": {"country": "act_1375009352774405", "regional": "act_975723752516548"},
-        "MM": {"country": "act_1269417169813870", "regional": "act_1269412346481019"}
+        "MM": {"country": "act_1269417169813870", "regional": "act_1269412346481019"},
+        "KH": {"country": "act_1457516791003906", "regional": "act_1460203437401908"}
       };
       var account_id = account_obj[$("#country_dropdown").val()][$("#account_dropdown").val()];
       var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
