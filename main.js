@@ -62,7 +62,17 @@ $(document).ready(function() {
 
       submitLAL(processedData, account_id);
     } 
-    
+    else if ($("#country_dropdown").val() === null || $("#account_dropdown").val() === null) || ($("#country_dropdown_two").val() === null || $("#account_dropdown_two").val() === null) {
+      var audience_name = "Lookalike (" + $("#country_dropdown_grabfood").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
+      var account_obj = {
+        "MY": {"regional": "act_1690580384614782"}
+        //"MM": {"country": "act_1294931020595818"}
+      };
+      var account_id = account_obj[$("#country_dropdown_grabfood").val()][$("#account_dropdown_grabfood").val()];
+      var processedData = {"name": audience_name, "origin_audience_id": $("#a_id").val(), "subtype": "LOOKALIKE", "lookalike_spec": {"country": $("#country_dropdown_two").val(), "ratio": lal_ratio}, "access_token": "EAADeZBgSHnjsBAJi4JGHWUpFeA13bm2SjvOfDL1llxouZB4TSJPZBLZAw2TIgFZA9pbDAuEfD4dsysKiPHcSOkDy1n5ZBAmZC7Fo6I3q65PJYFkHX0h8O2cBFot6jFjD0PCZBzYMMs2aGriUv551kvlaV1Mvltmd7ZC8NJNBjnZA1xkwZDZD"};
+
+      submitLAL(processedData, account_id);
+    } 
     else {
       var audience_name = "Lookalike (" + $("#country_dropdown").val() + ", " + $("#lal_value").text() + "%) - " + $("#a_name").val();
       var account_obj = {
